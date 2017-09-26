@@ -3,31 +3,127 @@
 	padding: 0;
 	font-family: helvetica sans-serif arial;
 	font-size: 16px;
-	/*border-box: box-sizing;*/
+	color: white;
 	box-sizing: border-box;
 }
 
+@font-face{
+  font-family: "Chalet";
+  src: url("../font/chalet/Chalet.eot");
+  src: url("../font/chalet/Chalet.eot?#iefix") format("embedded-opentype"),
+     url("../font/chalet/Chalet.woff") format("woff"),
+     url("../font/chalet/Chalet.ttf") format("truetype"),
+     url("../font/chalet/Chalet.svg#Chalet") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "FontAwesome";
+  src: url("../font/fontAwesome/fontawesome-webfont.eot");
+  src: url("../font/fontAwesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"),
+     url("../font/fontAwesome/fontawesome-webfont.woff") format("woff"),
+     url("../font/fontAwesome/fontawesome-webfont.ttf") format("truetype"),
+     url("../font/fontAwesome/fontawesome-webfont.svg#FontAwesome") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+i.fa-star-o{
+	font-size: 1rem;
+	vertical-align: top;
+}
+
+a{
+	text-decoration: none;
+}
+
 html{
-	background-color: rgba(0,0,0,.7);
+	background-color: rgba(0,0,0,.9);
 }
 
 h3{
-	color: #5500ff;
+	color: #E0E0E0;
 }
 
-.container{
-	background-color: #000;
-	
+h1{
+	font-family: Chalet;
+	color: #FF6F00;
+}
+
+.flex{
+	/*background-color: red;*/
+	/*background-color: rgba(0,0,0,.9);*/
 }
 
 .item{
-	background-color: #fff;
-	/*width: 2rem;*/
-	margin: .2rem;
+	/*background-color: red;*/
+	/*background-color: rgba(0,0,0,.9);*/
+
+	/*border: thin solid #000;*/
+}
+
+.item:hover{
+	background-color: rgba(255,255,255,0.3); 
+}
+
+header{
+	height: 5vh;
+}
+
+header .item{
+	width: 10rem;
+}
+
+header .item:nth-child(3)>i{
+	margin: 0 1rem;
+}
+
+section{
+	height: 75vh;
 }
 
 section .item{
-	height: 25vh;
+	height: 15vh;
 }
 
+section .item:nth-child(2){
+	height: 45vh;
+}
+
+.imagen{
+	width: 14rem;
+	height: 20rem;
+	background: url(../img/litoos.jpg)  no-repeat;	
+	background-size: cover;
+	border-radius: 1rem;
+}
+
+footer{
+	margin-top: 15vh;
+	height: 5vh;
+}
+
+
+/*//PHONE*/
+@media only screen and (max-width: 720px) {
+	header .item{
+		flex-grow: 1;
+	}
+
+  header .item:nth-child(2){
+  	background: rgba(255,255,255,0.2);
+  	flex-grow: 20;
+  }
+
+  header .item:nth-child(3)>i{
+  	margin: 0 2px;
+  }
+
+  .imagen{
+		width: 15rem;
+		height: 21rem;
+	}
+
+}
 
